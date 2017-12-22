@@ -13,6 +13,7 @@ import rbadia.voidspace.model.Asteroid;
 import rbadia.voidspace.model.BigBullet;
 //import rbadia.voidspace.model.Boss;
 import rbadia.voidspace.model.Bullet;
+import rbadia.voidspace.model.EnemyBoss;
 import rbadia.voidspace.model.Floor;
 //import rbadia.voidspace.model.BulletBoss;
 //import rbadia.voidspace.model.BulletBoss2;
@@ -34,6 +35,7 @@ public class GraphicsManager {
 	private BufferedImage asteroidExplosionImg;
 	private BufferedImage megaManExplosionImg;
 	private BufferedImage bigAsteroidExplosionImg;
+	private BufferedImage EnemyBossImg;
 
 	/**
 	 * Creates a new graphics manager and loads the game images.
@@ -50,6 +52,7 @@ public class GraphicsManager {
 			this.asteroidExplosionImg = ImageIO.read(getClass().getResource("/rbadia/voidspace/graphics/asteroidExplosion.png"));
 			this.bulletImg = ImageIO.read(getClass().getResource("/rbadia/voidspace/graphics/bullet.png"));
 			this.bigBulletImg = ImageIO.read(getClass().getResource("/rbadia/voidspace/graphics/bigBullet.png"));
+			this.EnemyBossImg =ImageIO.read(getClass().getResource("/rbadia/voidspace/graphics/realBossEnemy.png")); //added
 
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "The graphic files are either corrupt or missing.",
@@ -66,6 +69,12 @@ public class GraphicsManager {
 	 * @param observer object to be notified
 	 */
 
+	public void drawEnemyBoss (EnemyBoss enemyBoss, Graphics2D g2d, ImageObserver observer){ //added
+		g2d.drawImage(EnemyBossImg, enemyBoss.x, enemyBoss.y, observer);	
+	}
+	
+	
+	
 	public void drawMegaMan (MegaMan megaMan, Graphics2D g2d, ImageObserver observer){
 		g2d.drawImage(megaManImg, megaMan.x, megaMan.y, observer);	
 	}
@@ -116,7 +125,9 @@ public class GraphicsManager {
 	 * @param observer object to be notified
 	 */
 	public void drawAsteroid(Asteroid asteroid, Graphics2D g2d, ImageObserver observer) {
+		
 		g2d.drawImage(asteroidImg, asteroid.x, asteroid.y, observer);
+		
 	}
 
 	/**

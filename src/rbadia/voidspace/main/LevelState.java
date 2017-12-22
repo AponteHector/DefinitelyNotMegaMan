@@ -3,6 +3,7 @@ package rbadia.voidspace.main;
 import java.awt.Graphics2D;
 import javax.swing.JPanel;
 import rbadia.voidspace.graphics.GraphicsManager;
+import rbadia.voidspace.model.Platform;
 import rbadia.voidspace.sounds.SoundManager;
 
 public abstract class LevelState extends JPanel {
@@ -75,5 +76,7 @@ public abstract class LevelState extends JPanel {
 	public abstract void moveMegaManRight();
 	public abstract void speedUpMegaMan();
 	public abstract void slowDownMegaMan();
+	
+	public abstract int skipLevel();
 	
 }

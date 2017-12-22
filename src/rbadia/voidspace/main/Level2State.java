@@ -33,7 +33,7 @@ public class Level2State extends Level1State {
 		Graphics2D g2d = getGraphics2D();
 		if((asteroid.getX() + asteroid.getPixelsWide() >  0)) {
 			asteroid.translate(-asteroid.getSpeed(), asteroid.getSpeed()/2);
-			getGraphicsManager().drawAsteroid(asteroid, g2d, this);	
+			getGraphicsManager().drawAsteroid(asteroid, g2d, this);
 		}
 		else {
 			long currentTime = System.currentTimeMillis();
@@ -64,4 +64,6 @@ public class Level2State extends Level1State {
 		}
 		return platforms;
 	}
+	
+
 }

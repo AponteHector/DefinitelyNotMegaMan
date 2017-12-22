@@ -1,9 +1,12 @@
 package rbadia.voidspace.model;
 
+
+
 public class Asteroid extends GameObject {
+	
 	private static final long serialVersionUID = 1L;
 	
-	public static final int DEFAULT_SPEED = 4;
+	public static final int DEFAULT_SPEED = 4; 
 	
 	public static final int WIDTH = 32;
 	public static final int HEIGHT = 32;

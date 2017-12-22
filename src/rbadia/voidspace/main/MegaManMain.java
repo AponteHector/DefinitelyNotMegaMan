@@ -34,7 +34,7 @@ public class MegaManMain {
 
 
 		MainFrame frame = new MainFrame();              		// Main Game Window
-		LevelLogic gameLogic = new LevelLogic();        		// Coordinates among various levels
+		NewLevelLogic gameLogic = new NewLevelLogic();        		// Coordinates among various levels
 		InputHandler inputHandler = new InputHandler(); 		// Keyboard listener
 		GraphicsManager graphicsMan = new GraphicsManager(); // Draws all graphics for game objects
 		SoundManager soundMan = new SoundManager();			// Loads and plays all sounds during the game
@@ -54,9 +54,13 @@ public class MegaManMain {
 
 			GameStatus gameStatus = new GameStatus();
 			gameStatus.setLivesLeft(3);
-			LevelState level1State = new Level1State(1, frame, gameStatus, gameLogic, inputHandler, graphicsMan, soundMan);
+			LevelState Newlevel1State = new NewLevel1State(1, frame, gameStatus, gameLogic, inputHandler, graphicsMan, soundMan);
 			LevelState level2State = new Level2State(2, frame, gameStatus, gameLogic, inputHandler, graphicsMan, soundMan);
-			LevelState levels[] = { level1State, level2State };
+		    LevelState level3State = new Level3State(3, frame, gameStatus, gameLogic, inputHandler, graphicsMan, soundMan);
+		    LevelState level4State = new Level4State(4, frame, gameStatus, gameLogic, inputHandler, graphicsMan, soundMan);
+		    
+		    
+			LevelState levels[] = { Newlevel1State, level2State,level3State,level4State };
 
 			String outcome = "CONGRATS!! YOU WON!!";
 			for (LevelState nextLevel : levels) {
@@ -79,7 +83,8 @@ public class MegaManMain {
 					outcome = "SORRY YOU LOST";
 					break;
 				}
-
+				
+				
 			}
 			playAgain = JOptionPane.showConfirmDialog(null, outcome + " ... Play Again?", "", JOptionPane.YES_NO_OPTION);
 		}

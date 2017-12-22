@@ -315,7 +315,8 @@ public class Level1State extends LevelState {
 		GameStatus status = getGameStatus();
 		if((asteroid.getX() + asteroid.getWidth() >  0)){
 			asteroid.translate(-asteroid.getSpeed(), 0);
-			getGraphicsManager().drawAsteroid(asteroid, g2d, this);	
+			getGraphicsManager().drawAsteroid(asteroid, g2d, this);
+			
 		}
 		else {
 			long currentTime = System.currentTimeMillis();
@@ -392,6 +393,7 @@ public class Level1State extends LevelState {
 
 	@Override
 	public boolean isLevelWon() {
+		
 		return levelAsteroidsDestroyed >= 3;
 	}
 
@@ -605,4 +607,9 @@ public class Level1State extends LevelState {
 	public void slowDownMegaMan() {
 		megaMan.setSpeed(megaMan.getDefaultSpeed());
 	}
+
+
+	
+
+	
 }
