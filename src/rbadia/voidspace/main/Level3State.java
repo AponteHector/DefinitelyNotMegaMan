@@ -39,42 +39,16 @@ public class Level3State extends Level2State {
 		super(level, frame, status, gameLogic, inputHandler, graphicsMan, soundMan);
 	}
 
-	
-    
 	@Override
 	public void doStart() {	
-
-		setStartState(START_STATE);
+		super.doStart();
+		setStartState(GETTING_READY);
 		setCurrentState(getStartState());
-		// init game variables
-	GameStatus status = this.getGameStatus();
-
-		status.setGameOver(false);
-		status.setNewAsteroid(true);
-
-		// init the life and the asteroid
-		newMegaMan();
-		newFloor(this, 9);
-		newPlatforms(getNumPlatforms());
-		newAsteroid(this);
-
-		lastAsteroidTime = -NEW_ASTEROID_DELAY;
-		lastLifeTime = -NEW_MEGAMAN_DELAY;
-
-		bigFont = originalFont;
-		biggestFont = null;
-
-		// Display initial values for scores
-		getMainFrame().getDestroyedValueLabel().setForeground(Color.BLACK);
-		getMainFrame().getLivesValueLabel().setText(Integer.toString(status.getLivesLeft()));
-		getMainFrame().getDestroyedValueLabel().setText(Long.toString(status.getAsteroidsDestroyed()));
-		getMainFrame().getLevelValueLabel().setText(Long.toString(status.getLevel()));
-
-		bullets = new ArrayList<Bullet>();
-		bigBullets = new ArrayList<BigBullet>();
-		//numPlatforms = new Platform[5];
+		
+		status.setNewAsteroid(true);	
+		
 	}
-	
+    
 	
 	
 	@Override
