@@ -2,7 +2,7 @@ package rbadia.voidspace.model;
 
 import java.util.Random;
 
-public class AsteroidV2 extends GameObject {
+public class AsteroidV2 extends Asteroid {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -15,7 +15,7 @@ public class AsteroidV2 extends GameObject {
 	public static final int HEIGHT =  32;
 	
 	public AsteroidV2(int xPos, int yPos) {
-		super(xPos, yPos, Asteroid.WIDTH, Asteroid.HEIGHT);
+		super(xPos, yPos);
 		this.setSpeed(DEFAULT_SPEED);
 	}
 

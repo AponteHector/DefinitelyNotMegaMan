@@ -100,11 +100,7 @@ public class Level1State extends LevelState {
 		setStartState(START_STATE);
 		setCurrentState(getStartState());
 		// init game variables
-		bullets = new ArrayList<Bullet>();
-		bigBullets = new ArrayList<BigBullet>();
-		//numPlatforms = new Platform[5];
-
-		GameStatus status = this.getGameStatus();
+	GameStatus status = this.getGameStatus();
 
 		status.setGameOver(false);
 		status.setNewAsteroid(false);
@@ -127,7 +123,11 @@ public class Level1State extends LevelState {
 		getMainFrame().getDestroyedValueLabel().setText(Long.toString(status.getAsteroidsDestroyed()));
 		getMainFrame().getLevelValueLabel().setText(Long.toString(status.getLevel()));
 
+		bullets = new ArrayList<Bullet>();
+		bigBullets = new ArrayList<BigBullet>();
+		//numPlatforms = new Platform[5];
 	}
+		
 
 	@Override
 	public void doInitialScreen() {
@@ -609,7 +609,4 @@ public class Level1State extends LevelState {
 	}
 
 
-	
-
-	
 }

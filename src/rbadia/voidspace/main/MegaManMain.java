@@ -13,6 +13,8 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import com.sun.java.swing.plaf.motif.MotifBorders.FrameBorder;
+
 import rbadia.voidspace.graphics.GraphicsManager;
 import rbadia.voidspace.sounds.SoundManager;
 
@@ -71,7 +73,9 @@ public class MegaManMain {
 				inputHandler.setLevelState(nextLevel);
 				gameStatus.setLevel(nextLevel.getLevel());
 				
+				
 				frame.setVisible(true);  // TODO verify whether this is necessary
+                
 				startInitialMusic();
 
 				// init main game loop
