@@ -6,7 +6,7 @@ public class NewLevelLogic extends LevelLogic {
     
 	private long lastBulletTime;
 	private long lastExchangeTime;
-	private long lastBigBulletTime;
+	
 	private int stack= 0;
 	private int mute = 0;
 
