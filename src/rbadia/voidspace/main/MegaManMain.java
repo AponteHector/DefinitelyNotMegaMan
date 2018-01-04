@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
 import com.sun.java.swing.plaf.motif.MotifBorders.FrameBorder;
 
 import rbadia.voidspace.graphics.GraphicsManager;
+import rbadia.voidspace.graphics.NewGraphicsManager;
 import rbadia.voidspace.sounds.SoundManager;
 
 /**
@@ -40,7 +41,9 @@ public class MegaManMain {
 		InputHandler inputHandler = new InputHandler(); 		// Keyboard listener
 		GraphicsManager graphicsMan = new GraphicsManager(); // Draws all graphics for game objects
 		SoundManager soundMan = new SoundManager();			// Loads and plays all sounds during the game
-
+        
+		NewGraphicsManager graphicsMan2 = new NewGraphicsManager(); //Draws the added enemy graphics
+		
 		audioFile = new File("audio/menuScreen.wav");
 		try {
 			audioStream = AudioSystem.getAudioInputStream(audioFile);
@@ -59,7 +62,7 @@ public class MegaManMain {
 			LevelState Newlevel1State = new NewLevel1State(1, frame, gameStatus, gameLogic, inputHandler, graphicsMan, soundMan);
 			LevelState level2State = new Level2State(2, frame, gameStatus, gameLogic, inputHandler, graphicsMan, soundMan);
 		    LevelState level3State = new Level3State(3, frame, gameStatus, gameLogic, inputHandler, graphicsMan, soundMan);
-		    LevelState level4State = new Level4State(4, frame, gameStatus, gameLogic, inputHandler, graphicsMan, soundMan);
+		    LevelState level4State = new Level4State(4, frame, gameStatus, gameLogic, inputHandler, graphicsMan2, soundMan);
 		    
 		    
 			LevelState levels[] = { Newlevel1State, level2State,level3State,level4State };

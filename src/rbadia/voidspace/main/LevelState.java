@@ -22,6 +22,8 @@ public abstract class LevelState extends JPanel {
 	private int currentState = START_STATE;
 	private int startState = START_STATE;
 	
+	
+	
 	private GraphicsManager graphicsManager;
 	private LevelLogic gameLogic;
 	private InputHandler inputHandler;
@@ -64,8 +66,9 @@ public abstract class LevelState extends JPanel {
 	public abstract void doGameOverScreen();
 	public abstract void doGameOver();
 	public abstract void doLevelWon();
-	
 	public abstract boolean isLevelWon();
+	
+	public abstract void doNewEnemyBoss(); //added
 	
 	// Game Actions in response to user controls
 	public abstract void fireBullet();

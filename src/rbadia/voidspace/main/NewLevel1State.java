@@ -6,6 +6,10 @@ import rbadia.voidspace.sounds.SoundManager;
 public class NewLevel1State extends Level1State {
 
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	protected static final int NEW_ASTEROID_DELAY = 0;
 	
 	

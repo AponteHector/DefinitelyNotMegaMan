@@ -110,7 +110,7 @@ public class Level1State extends LevelState {
 		newFloor(this, 9);
 		newPlatforms(getNumPlatforms());
 		newAsteroid(this);
-
+        
 		lastAsteroidTime = -NEW_ASTEROID_DELAY;
 		lastLifeTime = -NEW_MEGAMAN_DELAY;
 
@@ -213,20 +213,22 @@ public class Level1State extends LevelState {
 			this.originalFont = g2d.getFont();
 			this.bigFont = originalFont;
 		}
-
+       
 		clearScreen();
 		drawStars(50);
 		drawFloor();
 		drawPlatforms();
 		drawMegaMan();
 		drawAsteroid();
+		
 		drawBullets();
+	
 		drawBigBullets();
 		checkBullletAsteroidCollisions();
 		checkBigBulletAsteroidCollisions();
 		checkMegaManAsteroidCollisions();
 		checkAsteroidFloorCollisions();
-
+        
 		// update asteroids destroyed (score) label  
 		getMainFrame().getDestroyedValueLabel().setText(Long.toString(status.getAsteroidsDestroyed()));
 		// update lives left label
@@ -529,7 +531,8 @@ public class Level1State extends LevelState {
 		this.megaMan = new MegaMan((getWidth() - MegaMan.WIDTH) / 2, (getHeight() - MegaMan.HEIGHT - MegaMan.Y_OFFSET) / 2);
 		return megaMan;
 	}
-
+    
+	
 	public Floor[] newFloor(Level1State screen, int n){
 		floor = new Floor[n];
 		for(int i=0; i<n; i++){
@@ -607,6 +610,9 @@ public class Level1State extends LevelState {
 	public void slowDownMegaMan() {
 		megaMan.setSpeed(megaMan.getDefaultSpeed());
 	}
+
+	
+	
 
 
 }
