@@ -60,6 +60,7 @@ import rbadia.voidspace.model.EnemyBullet;
         // DRAW METHODS
 
 		public void drawEnemyBoss (EnemyBoss enemyBoss, Graphics2D g2d, ImageObserver observer){ 
+		
 			g2d.drawImage(enemyBossImg, enemyBoss.x, enemyBoss.y, observer);	
 		}
 	
