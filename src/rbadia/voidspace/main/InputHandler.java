@@ -46,7 +46,7 @@ public class InputHandler implements KeyListener{
 		mIsPressed = false;
 		sIsPressed = false;
 		iIsPressed = false;
-		nIsPressed = false; 
+		nIsPressed = false; //added
 	}
 
 	public boolean isLeftPressed() {
@@ -137,7 +137,7 @@ public class InputHandler implements KeyListener{
 		case KeyEvent.VK_I:
 			this.iIsPressed = true;
 			break;
-		case KeyEvent.VK_N: 
+		case KeyEvent.VK_N:      //added
 		    this.nIsPressed = true;
 		    break;
 		}

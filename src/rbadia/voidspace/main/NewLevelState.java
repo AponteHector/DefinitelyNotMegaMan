@@ -115,12 +115,19 @@ public class NewLevelState extends LevelState {
 		
 	}
 
-	@Override
-	public int skipLevel() {
-		// TODO Auto-generated method stub
-		return 0;
+	
+	public int skipL
+    
+	public doNewEnemyBoss() {
+		
 	}
 
+	@Override
+	public void skipLevels() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	
 	
 }

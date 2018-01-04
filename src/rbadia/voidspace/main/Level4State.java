@@ -172,7 +172,6 @@ public class Level4State extends Level1State {
 		
 		EnemyBoss enemy = this.getEnemyBoss();
 		
-		
 		 int randomNumber = rand.nextInt((int) (this.getHeight() - enemyBullets.getPixelsTall() - 32));
 		
 		if((enemyBullets.getX() + enemyBullets.getWidth() >  0)){
@@ -185,11 +184,8 @@ public class Level4State extends Level1State {
 			if((currentTime - lastAsteroidTime) > NEW_ENEMYBULLETS_DELAY){
 				// draw a new bullet
 				lastAsteroidTime = currentTime;
-			    
-				
-				   
-			    enemy.setLocation( getWidth() - 60, randomNumber );		
-					
+			       
+			    enemy.setLocation( getWidth() - 60, randomNumber );			
 				
 				enemyBullets.setLocation((int) (this.getWidth() - enemyBullets.getPixelsWide()), 
 						

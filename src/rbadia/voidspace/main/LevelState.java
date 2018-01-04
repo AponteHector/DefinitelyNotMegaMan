@@ -1,3 +1,4 @@
+
 package rbadia.voidspace.main;
 
 import java.awt.Graphics2D;
@@ -80,6 +81,8 @@ public abstract class LevelState extends JPanel {
 	public abstract void speedUpMegaMan();
 	public abstract void slowDownMegaMan();
 	
-	public abstract int skipLevel(); //added
+	public abstract int skipLevel();
+	
+
 	
 }

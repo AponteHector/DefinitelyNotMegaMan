@@ -19,7 +19,7 @@ public class NewLevel1State extends Level1State {
 		super(level, frame, status, gameLogic, inputHandler, graphicsMan, soundMan);
 		// TODO Auto-generated constructor stub
 	}
-
+        @Override
 		public int skipLevel() {
 			
 			 levelAsteroidsDestroyed = 3;
@@ -30,3 +30,4 @@ public class NewLevel1State extends Level1State {
 	
 
 }
+

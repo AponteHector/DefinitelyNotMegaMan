@@ -45,7 +45,8 @@ public class Level1State extends LevelState {
 	protected int damage=0;
 	protected static final int NEW_MEGAMAN_DELAY = 500;
 	protected static final int NEW_ASTEROID_DELAY = 500;
-
+    
+		
 	protected long lastAsteroidTime;
 	protected long lastLifeTime;
 
@@ -612,6 +613,9 @@ public class Level1State extends LevelState {
 	}
 
 	
+
+	
+
 	
 
 
