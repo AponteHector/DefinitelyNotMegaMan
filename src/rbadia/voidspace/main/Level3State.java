@@ -1,5 +1,4 @@
 package rbadia.voidspace.main;
-
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ public class Level3State extends Level2State {
 	
 	protected Asteroid asteroid2;
 	protected Asteroid asteroid3;
-	protected Asteroid asteroid4;
+	
 	
     private Random rand = new Random();
     

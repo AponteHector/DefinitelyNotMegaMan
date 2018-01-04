@@ -1,6 +1,7 @@
 package rbadia.voidspace.main;
 
 import rbadia.voidspace.graphics.GraphicsManager;
+import rbadia.voidspace.model.Bullet;
 import rbadia.voidspace.sounds.SoundManager;
 
 public class NewLevel1State extends Level1State {
@@ -27,6 +28,15 @@ public class NewLevel1State extends Level1State {
 			
 		}
 		
+    	public boolean moveBullet2(Bullet bullet){
+    		if(bullet.getY() - bullet.getSpeed() >= 0){
+    			bullet.translate(-bullet.getSpeed(), 0);
+    			return false;
+    		}
+    		else{
+    			return true;
+    		}
+    	}
 	
 
 }

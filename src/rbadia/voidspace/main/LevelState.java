@@ -69,7 +69,7 @@ public abstract class LevelState extends JPanel {
 	public abstract void doLevelWon();
 	public abstract boolean isLevelWon();
 	
-	public abstract void doNewEnemyBoss(); //added
+
 	
 	// Game Actions in response to user controls
 	public abstract void fireBullet();
